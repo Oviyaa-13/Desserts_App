@@ -1,0 +1,691 @@
+/* //10/8 */
+/* Header Styles */
+header {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better separation */
+}
+
+/* Navigation Styles */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffdee3;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin: 0 15px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.logo {
+  font-weight: bold; 
+  font-style: italic;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.navigation a:hover {
+  color: #68b0c8; /* Hover color for links */
+  text-decoration: underline; /* Adds underline on hover */
+}
+.navigation .logout:hover {
+  color: #68b0c8; /* Hover color for Logout */
+  text-decoration: underline; /* Adds underline on hover */
+  cursor: pointer;
+}
+/* Cart Page Styles */
+.cart-page {
+  background: linear-gradient(to right, #add8e6, #ffb6c1);
+  padding: 20px;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distributes the items vertically */
+}
+
+/* Price Details - Centered at the top */
+.price-details {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Subtotal Box - Centered below Price Details */
+.subtotal-box {
+  width: 50%; /* Adjust width as needed */
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 40px; /* Space between subtotal and checkout button */
+}
+
+/* Subtotal Details */
+.subtotal-details {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.subtotal-text {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Checkout Button - Centered at the Bottom */
+.checkout-btn {
+  background-color: #f08080;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Ensures button is centered */
+  margin-bottom: 20px; /* Space from bottom of page */
+}
+
+.checkout-btn:hover {
+  background-color: #e05c5c;
+}
+
+/* Products Container - Just below Subtotal */
+.products-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%; /* Ensure it uses the full width */
+  box-sizing: border-box;
+  margin-bottom: 20px; /* Space between products and checkout button */
+}
+
+/* Individual Product Card */
+.product-card {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: #ffdee3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image Container */
+.imageContainer {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product Price */
+.price {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Cart Quantity Controls */
+.leftContainer {
+  margin-top: 90px;
+  width: 600px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: flex;
+  padding: 10px;
+}
+
+.leftContainer img {
+  padding-top: 25px;
+  padding-left: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.leftContainer-div-parent {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.leftContainer-div-parent div {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.button-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button-div button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #f08080;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-div button:hover {
+  background-color: #e05c5c;
+}
+
+.button-div p {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Full-screen Background Applied to the Entire Body */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-page {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: linear-gradient(
+    rgba(173, 216, 230, 0.8), /* Light blue with slightly reduced opacity */
+    rgba(255, 182, 193, 0.8) /* Light pink with slightly reduced opacity */
+  );
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(173, 216, 230, 0.6), /* Light blue with reduced opacity */
+    rgba(255, 182, 193, 0.6) /* Light pink with reduced opacity */
+  ),
+  url('./assets/images/homedess.png') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.auth-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.success {
+  color: green;
+  margin-top: 10px;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #f08080;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.primary-btn:hover {
+  background-color: #9de7ff; /* Lighter shade on hover */
+}
+
+/* Modal Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContainer {
+  background: linear-gradient(135deg, #add8e6, #ffffff);
+  width: 90%;
+  max-width: 400px;
+  margin-top: 5%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1001;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f08080;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalRight {
+  text-align: center;
+}
+
+.modalRight .content p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.modalRight .content h1 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Register Link Styles */
+.registerLink {
+  color: #00008b;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.registerLink:hover {
+  color: #00008b;
+  text-decoration: underline;
+}
+/* AdminOrder.css */
+/* Admin Orders Page */
+.admin-orders {
+  padding: 10px;
+  background-color: #ffb6c1; /* Light gray background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-orders h2 {
+  font-size: 1.5rem; /* Reduced font size */
+  margin-bottom: 10px;
+  color: #0b0000;
+  text-align: center;
+  border: 2px solid #68b0c8; /* Border for emphasis */
+  padding-bottom: 5px;
+  font-family:'Times New Roman', Times, serif
+}
+
+.stock-btn {
+  background-color:#68b0c8;
+  color: #fff;
+  border: none;
+  padding: 8px 16px; /* Reduced padding */
+  font-size: 1rem; /* Slightly smaller font */
+  cursor: pointer;
+  border-radius: 5px; /* Softer rounded corners */
+  margin-bottom: 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stock-btn:hover {
+  background-color: #2e8cf1;
+}
+
+.orders-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Slightly rounded corners */
+  padding: 1px;
+  margin-bottom: 10px; /* Reduced margin between orders */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two-column layout */
+  grid-gap: 1px; /* Reduced gap */
+  align-items: center; /* Center content vertically */
+}
+
+.order-item div {
+  padding: 2px;
+  border-bottom: 1px solid #eee;
+}
+
+.order-item div:last-child {
+  border-bottom: none; /* Remove bottom border from the last item */
+}
+
+.order-item strong {
+  font-weight: bold;
+  color: #333;
+  display: block; /* Make strong elements block-level */
+  margin-bottom: 3px; /* Space between strong and content */
+}
+
+.order-item .order-detail {
+  color: #555; /* Slightly lighter color for details */
+  font-size: 0.5rem; /* Smaller font size for details */
+}
+
+.order-item .products-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-item .products-list li {
+  margin-bottom: 0px; /* Reduce spacing between product items */
+}
+
+.mark-done {
+  color: #28a745;
+  font-size: 1.5rem; /* Slightly smaller icon */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  justify-self: end;
+}
+
+.mark-done:hover {
+  color: #218838;
+}
+
+/* Adding Colors and Lines */
+.order-item:nth-child(odd) {
+  background-color: #f7f7f7; /* Alternate background color */
+}
+
+.order-item:not(:last-child) {
+  border-bottom: 2px solid #ddd; /* Line between each order */
+}
+
+h2, .order-item strong {
+  border-left: 5px solid #68b0c8; /* Colored lines next to headings */
+  padding-left: 10px;
+}
+
+.order-item .order-detail {
+  border-left: 5px solid #28a745; /* Colored lines next to details */
+  padding-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-item {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+  .stock-btn {
+      width: 100%; /* Full width button on mobile */
+  }
+}
+
+/* General Text Styles */
+p {
+  font-size: 0.9rem; /* Slightly smaller font */
+  color: #555;
+  text-align: center;
+}
+
+.no-orders {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+}
+/* AdminStock Styles */
+.admin-stock {
+  padding: 20px;
+  background-color: #b2def8; /* Light pink background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-stock h2 {
+  font-size: 1.8rem; /* Slightly larger font size */
+  margin-bottom: 20px;
+  color: #0b0000; /* Dark text color */
+  text-align: center;
+  border: #9de7ff;
+}
+
+.add-stock-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Spacing between form elements */
+  max-width: 400px;
+  margin: 0 auto; /* Center the form */
+  background-color: #ffffff; /* White background for form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the form */
+}
+
+.add-stock-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.add-stock-form button {
+  background-color: #68b0c8; /* Button background color */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-stock-form button:hover {
+  background-color: #2e8cf1; /* Darker button color on hover */
+}
+
+.stocks-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.stock-item {
+  background-color: #ffffff; /* White background for stock items */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.stock-item span {
+  flex: 1;
+}
+
+.edit-stock, .delete-stock {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.edit-stock {
+  color: #4caf50;
+  margin-right: 15px; /* Adds space between edit and delete icons */
+}
+
+.edit-stock:hover {
+  color: #388e3c;
+}
+
+.delete-stock {
+  color: #f44336;
+}
+
+.delete-stock:hover {
+  color: #c62828;
+}
+.navigate-orders-button {
+  background-color:#74b971;
+  color: #fff;
+  border: none;
+  padding: 8px 16px; /* Reduced padding */
+  font-size: 1rem; /* Slightly smaller font */
+  cursor: pointer;
+  border-radius: 5px; /* Softer rounded corners */
+  margin-bottom: 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navigate-orders-button:hover {
+  background-color: #388e3c;
+}
+/* Checkout Page Styles */
+.checkoutpage {
+  background: linear-gradient(to right, #add8e6, #ffb6c1);
+  padding: 20px;
+  max-width: 300px;
+  margin: 0 auto; /* Center the checkout container on the page */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+}
+
+.checkoutpage h3 {
+  text-align: center;
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.checkoutpage input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  box-sizing: border-box; /* Ensure padding is included in element's width/height */
+  transition: border-color 0.3s ease;
+}
+
+.checkoutpage input[type="text"]:focus {
+  border-color: #f08080;
+  outline: none;
+}
+
+.checkoutpage button {
+  width: 100%;
+  padding: 15px;
+  background-color: #f08080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.checkoutpage button:hover {
+  background-color: #e05c5c;
+}
+
+/* Additional Styles for Responsive Design */
+@media (max-width: 768px) {
+  .checkoutpage {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .checkoutpage h3 {
+    font-size: 1.5em;
+  }
+
+  .checkoutpage input[type="text"],
+  .checkoutpage button {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
